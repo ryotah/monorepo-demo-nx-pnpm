@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "projects": {
+    "web-1": {
+      "root": "apps/web-1"
+    },
+    "web-2": {
+      "root": "apps/web-2"
+    },
+    "ui": {
+      "root": "packages/ui"
+    }
+  }
+}
