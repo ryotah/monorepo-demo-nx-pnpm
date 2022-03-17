@@ -37,6 +37,15 @@ pnpm nx run-many --target=test --all
 # > nx run web-2:test
 # > nx run ui:test
 
+pnpm nx affected --target=test
+# (no tasks)
+
+echo "export const foo = 'foo';" >> packages/ui/index.ts
+pnpm nx affected --target=test 
+# > nx run web-1:test
+# > nx run ui:test
+# https://nx.dev/using-nx/mental-model#affected-commands
+
 # Graph dependencies within workspace.
 # https://nx.dev/cli/dep-graph
 pnpm nx graph
