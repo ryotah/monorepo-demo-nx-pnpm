@@ -12,5 +12,27 @@
   },
   "affected": {
     "defaultBase": "main"
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "deploy": [
+      {
+        "target": "lint",
+        "projects": "self"
+      },
+      {
+        "target": "test",
+        "projects": "self"
+      },
+      {
+        "target": "build",
+        "projects": "self"
+      }
+    ]
   }
 }
